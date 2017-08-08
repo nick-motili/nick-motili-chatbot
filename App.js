@@ -1,21 +1,22 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { createStore, combineReducers } from 'redux';
+import { Provider } from 'react-redux';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
-    );
-  }
-}
+import * as appReducers from './src/store/reducers';
+import { ChatList } from './src/components';
+import populateInitialMessage from './src/store/initial-data';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+//= ============================================================================
+// App initiliaziation logic
+//= ============================================================================
+
+const appStore = createStore(combineReducers(appReducers));
+populateInitialMessage(appStore);
+
+export const App = () => (
+  <Provider store={appStore}>
+    <ChatList />
+  </Provider>
+);
+
+export default App;
