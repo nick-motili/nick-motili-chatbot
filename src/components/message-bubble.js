@@ -8,10 +8,14 @@ export default class MessageBubble extends PureComponent {
   render() {
     const rowStyles = [ChatStyles.TextChatListRow];
     const bubbleStyles = [ChatStyles.TextChatBubble];
+    let avatar = null;
 
     if (this.props.isBot) {
       rowStyles.push(ChatStyles.TextChatListRowBot);
       bubbleStyles.push(ChatStyles.TextChatBubbleBot);
+      avatar = require('../images/robot-avatar.png'); // eslint-disable-line global-require
+    } else {
+      avatar = require('../images/nick-avatar.png'); // eslint-disable-line global-require
     }
 
     return (
@@ -19,7 +23,7 @@ export default class MessageBubble extends PureComponent {
         <Avatar
           small
           rounded
-          source={require('../images/robot-avatar.png')} // eslint-disable-line global-require
+          source={avatar}
           style={ChatStyles.Avatar}
         />
         <Text style={bubbleStyles}>{ this.props.message }</Text>

@@ -1,3 +1,4 @@
+import * as shortid from 'shortid';
 import React, { Component } from 'react';
 import {
   View,
@@ -6,8 +7,17 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 
-import { MessageBubble } from '.';
+import { MessageBubble, MessageBox } from '.';
 import { ChatStyles } from '../styles';
+import * as ChatActions from '../store/actions/chat-actions';
+
+// This is a version of FlatList that just scrolls nicely to
+// the bottom when it's modified
+class MessageList extends FlatList {
+  componentDidUpdate(/* prevState, prevProps */) {
+    this.scrollToEnd();
+  }
+}
 
 class ChatComponent extends Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -21,16 +31,21 @@ class ChatComponent extends Component { // eslint-disable-line react/prefer-stat
     }
 
     return (
-      <KeyboardAvoidingView behavior="padding" keyboardVerticalOffset={80} style={{ flex: 1 }}>
+      <KeyboardAvoidingView behavior="padding" keyboardVerticalOffset={0} style={{ flex: 1 }}>
         <View style={{ flex: 1 }}>
-          <View style={{ flex: 2, overflow: 'hidden' }}>
-            <FlatList
-              data={this.props.messages}
-              keyExtractor={x => x.id}
-              renderItem={renderItem}
-              contentContainerStyle={ChatStyles.ChatList}
-            />
-          </View>
+          <MessageList
+            data={this.props.messages}
+            keyExtractor={x => x.id}
+            renderItem={renderItem}
+            style={ChatStyles.ChatList}
+            inverted
+            contentContainerStyle={ChatStyles.ChatListContainer}
+          />
+          <MessageBox
+            onAddMessage={(x) => {
+              this.props.addMessage(x);
+            }}
+          />
         </View>
       </KeyboardAvoidingView>
     );
@@ -41,7 +56,16 @@ const mapStateToProps = state => ({
   messages: state.chat,
 });
 
-const mapDispatchToProps = (/* dispatch */) => ({
+const mapDispatchToProps = dispatch => ({
+  addMessage: (text) => {
+    dispatch(
+      ChatActions.AddMessage(
+        shortid.generate(),
+        false,
+        text,
+      ),
+    );
+  },
 });
 
 const ChatList = connect(

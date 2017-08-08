@@ -4,15 +4,17 @@ const screenWidth = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
   ChatList: {
-    minHeight: '100%',
-    justifyContent: 'flex-end',
+    flex: 2,
+    backgroundColor: '#ffffff',
+  },
+  ChatListContainer: {
+    paddingTop: 30,
   },
   TextChatListRow: {
-    flex: 1,
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
   },
   TextChatListRowBot: {
-    flexDirection: 'row-reverse',
+    flexDirection: 'row',
   },
   TextChatBubble: {
     color: '#333333',
@@ -33,6 +35,19 @@ const styles = StyleSheet.create({
   Avatar: {
     marginRight: 25,
     marginLeft: 25,
+  },
+  ChatFooter: {
+    height: 40,
+    paddingTop: 6,
+    borderTopWidth: 1,
+    borderColor: '#cccccc',
+    backgroundColor: '#fafafa',
+  },
+  MessageBox: {
+    height: 34,
+    padding: 0,
+    paddingLeft: 10,
+    backgroundColor: '#cccccc',
   },
 });
 
