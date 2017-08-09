@@ -1,7 +1,7 @@
 import { StyleSheet, Dimensions } from 'react-native';
+import StyleConstants from './constants';
 
 const screenWidth = Dimensions.get('window').width;
-const motiliBackgroundColor = '#49C3E7';
 
 const styles = StyleSheet.create({
   ChatList: {
@@ -12,10 +12,10 @@ const styles = StyleSheet.create({
     paddingTop: 30,
   },
   ChatListRow: {
-    flexDirection: 'row-reverse',
-  },
-  ChatListRowBot: {
     flexDirection: 'row',
+  },
+  ChatListRowUser: {
+    flexDirection: 'row-reverse',
   },
   ChatEntry: {
     width: screenWidth * 0.80,
@@ -38,44 +38,21 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     backgroundColor: '#cccccc',
   },
-  TextBubble: {
-    color: '#333333',
-    backgroundColor: '#f4f4f4',
-    fontSize: 14,
+  StdBubble: {
+    backgroundColor: StyleConstants.MotiliBackgroundColor,
     padding: 15,
     borderRadius: 8,
     borderWidth: 0.5,
     borderColor: '#d6d7da',
     overflow: 'hidden',
   },
-  TextBubbleBot: {
+  StdBubbleUser: {
+    color: '#333333',
+    backgroundColor: '#f4f4f4',
+  },
+  StdBubbleText: {
     color: '#ffffff',
-    backgroundColor: motiliBackgroundColor,
-  },
-  JobDetailsView: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
-    backgroundColor: motiliBackgroundColor,
-    padding: 20,
-    borderRadius: 8,
-    borderColor: '#cccccc',
-  },
-  JobDetailsRow: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
-    marginBottom: 10,
-  },
-  JobDetailsHeadline: {
-    fontSize: 16,
-    marginVertical: 2,
-    color: '#ffffff',
-  },
-  JobDetailsText: {
-    color: '#ffffff',
-    marginLeft: 10,
-    paddingTop: 5,
+    fontSize: 14,
   },
 });
 

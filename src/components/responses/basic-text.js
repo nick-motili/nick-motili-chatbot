@@ -1,7 +1,9 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 import { ChatStyles } from '../../styles';
 
 export default props => (
-  <Text style={[ChatStyles.TextBubble, ChatStyles.TextBubbleBot]}>{ props.details }</Text>
+  <View style={ChatStyles.StdBubble}>
+    <Text style={ChatStyles.StdBubbleText}>{ props.details }</Text>
+  </View>
 );

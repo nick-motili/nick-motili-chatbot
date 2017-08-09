@@ -10,8 +10,12 @@ const ResponseFactory = (text) => {
         essentials: JobData.essentials,
       },
     };
-  }
-  return {
+  } else if (text.match(/qualif/i) !== null) {
+    return {
+      responseType: MessageTypes.QualificationsSelector,
+      responseDetails: JobData.technologies,
+    };
+  } return {
     responseType: MessageTypes.Text,
     responseDetails: "Hmmm.. I don't get it. You can always ask for help (hint: type 'help').",
   };

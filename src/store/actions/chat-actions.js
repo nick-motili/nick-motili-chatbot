@@ -3,6 +3,7 @@ import { ADD_MESSAGE } from './action-types';
 const MessageTypes = {
   Text: 'TEXT',
   JobDetails: 'JOBDETAILS',
+  QualificationsSelector: 'QUALIFICATIONS-SELECTOR',
 };
 
 function AddMessage(messageId, isBot, messageType, messageDetails) {

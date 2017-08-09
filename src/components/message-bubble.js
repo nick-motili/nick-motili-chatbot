@@ -8,22 +8,24 @@ import ResponseComponentFactory from './responses/response-component-factory';
 const MessageBubble = (props) => {
   const componentForType = (isBot, messageType, messageDetails) => {
     if (!isBot) {
-      return (<Text style={ChatStyles.TextBubble}>{ messageDetails }</Text>);
+      return (
+        <Text style={[ChatStyles.StdBubble, ChatStyles.StdBubbleUser]}>
+          { messageDetails }
+        </Text>
+      );
     }
 
     return ResponseComponentFactory(messageType, messageDetails);
   };
 
   const rowStyles = [ChatStyles.ChatListRow];
-  const itemStyles = [ChatStyles.ChatEntry];
   let avatar = null;
 
-  if (props.isBot) {
-    rowStyles.push(ChatStyles.ChatListRowBot);
-    itemStyles.push(ChatStyles.ChatEntryBot);
-    avatar = require('../images/robot-avatar.png'); // eslint-disable-line global-require
-  } else {
+  if (!props.isBot) {
+    rowStyles.push(ChatStyles.ChatListRowUser);
     avatar = require('../images/nick-avatar.png'); // eslint-disable-line global-require
+  } else {
+    avatar = require('../images/robot-avatar.png'); // eslint-disable-line global-require
   }
 
   return (
@@ -34,7 +36,7 @@ const MessageBubble = (props) => {
         source={avatar}
         style={ChatStyles.Avatar}
       />
-      <View style={itemStyles}>
+      <View style={ChatStyles.ChatEntry}>
         {
           componentForType(
             props.isBot,
