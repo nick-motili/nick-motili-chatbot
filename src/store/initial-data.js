@@ -9,6 +9,11 @@ export default function populateInitialMessage(store) {
   initialMessage += " If you get stuck just ask for help and I'll point you in the right direction.";
 
   store.dispatch(
-    ChatActions.AddMessage(shortid.generate(), true, initialMessage),
+    ChatActions.AddMessage(
+      shortid.generate(),
+      true,
+      ChatActions.MessageTypes.Text,
+      initialMessage,
+    ),
   );
 }

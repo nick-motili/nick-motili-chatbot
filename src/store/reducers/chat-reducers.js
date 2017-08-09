@@ -8,7 +8,8 @@ const chat = (state = [], action) => {
       const message = {
         id: action.messageId,
         isBot: action.isBot,
-        message: action.message,
+        messageType: action.messageType,
+        messageDetails: action.messageDetails,
       };
 
       return update(state, { $push: [message] });
