@@ -78,6 +78,19 @@ const methodologyResponse = (text) => {
   return rval;
 };
 
+const scheduleResponse = (text) => {
+  let rval = null;
+
+  if (text.match(/schedule/i)) {
+    rval = {
+      responseType: MessageTypes.Schedule,
+      responseDetails: JobData.specs,
+    };
+  }
+
+  return rval;
+};
+
 const helpResponse = (text) => {
   let rval = null;
   if (text.match(/help/i)) {
@@ -101,6 +114,7 @@ const responses = [
   technologiesResponse,
   equipmentResponse,
   methodologyResponse,
+  scheduleResponse,
   helpResponse,
   defaultResponse,
 ];

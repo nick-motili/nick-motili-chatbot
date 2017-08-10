@@ -6,8 +6,9 @@ import {
   QualificationsSelector,
   Technologies,
   Equipment,
-  Help,
   Methodology,
+  Schedule,
+  Help,
 } from '.';
 
 
@@ -25,6 +26,8 @@ const factory = (messageType, messageDetails) => {
       return <Equipment details={messageDetails} />;
     case MessageTypes.Methodology:
       return <Methodology details={messageDetails} />;
+    case MessageTypes.Schedule:
+      return <Schedule details={messageDetails} />;
     case MessageTypes.Help:
       return <Help details={messageDetails} />;
     default:

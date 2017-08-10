@@ -4,6 +4,7 @@ import QualificationsSelector from './qualifications-selector';
 import Technologies from './technologies';
 import Equipment from './equipment';
 import Methodology from './methodology';
+import Schedule from './schedule';
 import Help from './help';
 
 export {
@@ -13,5 +14,6 @@ export {
   Technologies,
   Equipment,
   Methodology,
+  Schedule,
   Help,
 };
