@@ -64,6 +64,18 @@ const equipmentResponse = (text) => {
   return rval;
 };
 
+const helpResponse = (text) => {
+  let rval = null;
+  if (text.match(/help/i)) {
+    rval = {
+      responseType: MessageTypes.Help,
+      responseDetails: {},
+    };
+  }
+
+  return rval;
+};
+
 const defaultResponse = (/* text */) => ({
   responseType: MessageTypes.Text,
   responseDetails: "Hmmm.. I don't get it. You can always ask for help (hint: type 'help').",
@@ -74,6 +86,7 @@ const responses = [
   qualificationsSelectorResponse,
   technologiesResponse,
   equipmentResponse,
+  helpResponse,
   defaultResponse,
 ];
 

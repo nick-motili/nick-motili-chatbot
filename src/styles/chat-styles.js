@@ -54,6 +54,9 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontSize: 14,
   },
+  StdBubbleTextBold: {
+    fontWeight: 'bold',
+  },
   StdBubbleRow: {
     flex: 1,
     flexDirection: 'row',

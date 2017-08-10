@@ -6,6 +6,7 @@ const MessageTypes = {
   QualificationsSelector: 'QUALIFICATIONS-SELECTOR',
   Technologies: 'TECHNOLOGIES',
   Equipment: 'EQUIPMENT',
+  Help: 'HELP',
 };
 
 function AddMessage(messageId, isBot, messageType, messageDetails) {
