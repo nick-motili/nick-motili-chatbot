@@ -23,7 +23,7 @@ const QualificationsSelectorComponent = (props) => {
   return (
     <View style={ChatStyles.StdBubble}>
       <Text style={ChatStyles.StdBubbleText}>
-        Ok! First I need to know what type of developer you are. Choose one below:
+        First I need to know what type of developer you are. Choose one below:
       </Text>
       <View style={styles.ButtonList}>
         {

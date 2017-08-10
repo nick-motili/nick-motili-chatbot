@@ -28,15 +28,10 @@ const styles = StyleSheet.create({
   ChatFooter: {
     height: 40,
     paddingTop: 6,
+    paddingLeft: 10,
     borderTopWidth: 1,
     borderColor: '#cccccc',
     backgroundColor: '#fafafa',
-  },
-  MessageBox: {
-    height: 34,
-    padding: 0,
-    paddingLeft: 10,
-    backgroundColor: '#cccccc',
   },
   StdBubble: {
     backgroundColor: StyleConstants.MotiliBackgroundColor,
@@ -45,6 +40,11 @@ const styles = StyleSheet.create({
     borderWidth: 0.5,
     borderColor: '#d6d7da',
     overflow: 'hidden',
+  },
+  StdBubbleHeader: {
+    borderColor: '#ffffff',
+    borderBottomWidth: 1,
+    paddingBottom: 10,
   },
   StdBubbleUser: {
     color: '#333333',
@@ -59,11 +59,36 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     marginBottom: 10,
+    alignItems: 'flex-start',
   },
   StdBubbleHeadline: {
     fontSize: 16,
     marginVertical: 2,
     color: '#ffffff',
+  },
+  StdBubbleSection: {
+    paddingLeft: 15,
+    paddingRight: 15,
+    paddingTop: 5,
+    backgroundColor: '#74cee8',
+    borderRadius: 8,
+    marginBottom: 8,
+  },
+  StdIcon: {
+    marginRight: 10,
+  },
+  OneOfSection: {
+    flex: 2,
+    backgroundColor: '#74cee8',
+    padding: 15,
+    borderRadius: 8,
+  },
+  OneOfSectionHeader: {
+    borderColor: '#ffffff',
+    borderBottomWidth: 1,
+    marginBottom: 10,
+    alignItems: 'flex-start',
+    paddingBottom: 5,
   },
 });
 

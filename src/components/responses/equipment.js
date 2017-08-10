@@ -1,21 +1,21 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { Icon } from 'react-native-elements';
 import { ChatStyles } from '../../styles';
+import { IconKeyRenderer, ValueRenderer, RenderResponse } from '../../response-renderers';
+
+const iconMap = {
+  operatingsystem: 'language',
+  computer: 'computer',
+  monitors: 'desktop-windows',
+};
 
 const Equipment = props => (
   <View style={ChatStyles.StdBubble}>
-    <View style={ChatStyles.StdBubbleRow}>
-      <Icon name="language" color="#ffffff" />
-      <Text style={ChatStyles.StdBubbleText}>{ props.details.operatingsystem }</Text>
+    <View style={[ChatStyles.StdBubbleRow, ChatStyles.StdBubbleHeader]}>
+      <Text style={ChatStyles.StdBubbleText}>Here is the equipment that we use...</Text>
     </View>
-    <View style={ChatStyles.StdBubbleRow}>
-      <Icon name="computer" color="#ffffff" />
-      <Text style={ChatStyles.StdBubbleText}>{ props.details.computer }</Text>
-    </View>
-    <View style={ChatStyles.StdBubbleRow}>
-      <Icon name="desktop-windows" color="#ffffff" />
-      <Text style={ChatStyles.StdBubbleText}>{ props.details.monitors }</Text>
+    <View>
+      { RenderResponse(props.details, IconKeyRenderer(iconMap), ValueRenderer) }
     </View>
   </View>
 );

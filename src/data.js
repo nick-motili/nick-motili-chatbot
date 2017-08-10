@@ -6,7 +6,7 @@ const job = {
     locations: 'denver',
     employment: EmploymentType().Permanent,
     experience: [ExperienceLevels().Junior, ExperienceLevels().Seasoned],
-    startdate: (new Date()).getTime(),
+    startdate: new Date(),
     companysize: CompanySize().TwentyToFifty,
     teamsize: { min: 1, max: 6 },
   },
