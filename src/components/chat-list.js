@@ -32,7 +32,7 @@ class ChatComponent extends Component { // eslint-disable-line react/prefer-stat
     }
 
     return (
-      <KeyboardAvoidingView behavior="padding" keyboardVerticalOffset={15} style={{ flex: 1 }}>
+      <KeyboardAvoidingView behavior="padding" keyboardVerticalOffset={0} style={{ flex: 1 }}>
         <View style={{ flex: 1 }}>
           <MessageList
             data={this.props.messages}
