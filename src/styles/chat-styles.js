@@ -54,6 +54,17 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontSize: 14,
   },
+  StdBubbleRow: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    marginBottom: 10,
+  },
+  StdBubbleHeadline: {
+    fontSize: 16,
+    marginVertical: 2,
+    color: '#ffffff',
+  },
 });
 
 export default styles;

@@ -36,7 +36,7 @@ const technologiesResponse = (text) => {
 
   if (match !== null) {
     const parts = match[0].split(' ');
-    const developerType = parts[0];
+    const developerType = parts[0].toLowerCase();
 
     if (developerType in JobData.technologies) {
       rval = {
@@ -52,6 +52,18 @@ const technologiesResponse = (text) => {
   return rval;
 };
 
+const equipmentResponse = (text) => {
+  let rval = null;
+  if (text.match(/equipment/i)) {
+    rval = {
+      responseType: MessageTypes.Equipment,
+      responseDetails: JobData.equipment,
+    };
+  }
+
+  return rval;
+};
+
 const defaultResponse = (/* text */) => ({
   responseType: MessageTypes.Text,
   responseDetails: "Hmmm.. I don't get it. You can always ask for help (hint: type 'help').",
@@ -61,6 +73,7 @@ const responses = [
   jobDetailsReponse,
   qualificationsSelectorResponse,
   technologiesResponse,
+  equipmentResponse,
   defaultResponse,
 ];
 

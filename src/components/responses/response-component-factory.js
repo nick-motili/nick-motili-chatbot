@@ -5,6 +5,7 @@ import {
   JobDetails,
   QualificationsSelector,
   Technologies,
+  Equipment,
 } from '.';
 
 
@@ -18,6 +19,8 @@ const factory = (messageType, messageDetails) => {
       return <QualificationsSelector details={messageDetails} />;
     case MessageTypes.Technologies:
       return <Technologies details={messageDetails} />;
+    case MessageTypes.Equipment:
+      return <Equipment details={messageDetails} />;
     default:
       throw new Error(`Can not locate component for ${messageType}`);
   }
