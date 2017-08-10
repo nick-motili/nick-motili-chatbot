@@ -12,7 +12,9 @@ const iconMap = {
 const Equipment = props => (
   <View style={ChatStyles.StdBubble}>
     <View style={[ChatStyles.StdBubbleRow, ChatStyles.StdBubbleHeader]}>
-      <Text style={ChatStyles.StdBubbleText}>Here is the equipment that we use...</Text>
+      <Text style={ChatStyles.StdBubbleText}>
+        Caaannnnn Do! Checkout out this awesome equipment!
+      </Text>
     </View>
     <View>
       { RenderResponse(props.details, IconKeyRenderer(iconMap), ValueRenderer) }

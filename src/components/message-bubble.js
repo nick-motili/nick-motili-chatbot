@@ -31,7 +31,7 @@ const MessageBubble = (props) => {
   return (
     <View style={rowStyles}>
       <Avatar
-        small
+        medium
         rounded
         source={avatar}
         style={ChatStyles.Avatar}

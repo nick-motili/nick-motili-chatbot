@@ -5,7 +5,7 @@ import Technologies from './technologies';
 import Equipment from './equipment';
 import Methodology from './methodology';
 import Schedule from './schedule';
-import Other from './other';
+import Benefits from './benefits';
 import Help from './help';
 
 export {
@@ -16,6 +16,6 @@ export {
   Equipment,
   Methodology,
   Schedule,
-  Other,
+  Benefits,
   Help,
 };

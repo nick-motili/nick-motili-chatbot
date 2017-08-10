@@ -16,7 +16,9 @@ const iconMap = {
 const JobDetails = props => (
   <View style={ChatStyles.StdBubble}>
     <View style={ChatStyles.StdBubbleRow}>
-      <Text style={ChatStyles.StdBubbleText}>Sure thing! Here are the details about the job:</Text>
+      <Text style={ChatStyles.StdBubbleText}>
+        Ohhhhh ya! Here&lsquo;s what you need to know about this job!
+      </Text>
     </View>
     <View style={ChatStyles.StdBubbleRow}>
       <Text style={ChatStyles.StdBubbleHeadline}>{ props.details.headline }</Text>

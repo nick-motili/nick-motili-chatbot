@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   Avatar: {
-    marginRight: 25,
+    marginRight: 30,
     marginLeft: 25,
   },
   ChatFooter: {

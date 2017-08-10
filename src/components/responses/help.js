@@ -7,7 +7,9 @@ import { ChatStyles } from '../../styles';
 const HelpScreen = (/* rops */) => (
   <View style={ChatStyles.StdBubble}>
     <View style={[ChatStyles.StdBubbleRow, ChatStyles.StdBubbleHeader]}>
-      <Text style={ChatStyles.StdBubbleText}>Here are the things you can ask me about:</Text>
+      <Text style={ChatStyles.StdBubbleText}>
+        Whoooooaaaa OK! Why don&lsquo;t you try asking me about these things?
+      </Text>
     </View>
     <View style={ChatStyles.StdBubbleRow}>
       <Text style={ChatStyles.StdBubbleText}>Ask me about the <B>job</B>.</Text>
@@ -25,7 +27,9 @@ const HelpScreen = (/* rops */) => (
       <Text style={ChatStyles.StdBubbleText}>Ask me about our <B>schedule</B>.</Text>
     </View>
     <View style={ChatStyles.StdBubbleRow}>
-      <Text style={ChatStyles.StdBubbleText}>Ask me about <B>other things</B> we offer.</Text>
+      <Text style={ChatStyles.StdBubbleText}>
+        Ask me about all the great <B>benefits</B> we offer.
+      </Text>
     </View>
   </View>
 );

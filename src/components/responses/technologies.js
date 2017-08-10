@@ -14,7 +14,7 @@ const Technologies = props => (
     <View style={ChatStyles.StdBubble}>
       <View style={[ChatStyles.StdBubbleRow, ChatStyles.StdBubbleHeader]}>
         <Text style={ChatStyles.StdBubbleText}>
-          Here&apos;s a list of qualifications:
+          YAAAAAA! Here are the things Motili is looking for in a developer!
         </Text>
       </View>
       {

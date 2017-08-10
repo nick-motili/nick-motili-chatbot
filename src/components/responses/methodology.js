@@ -7,7 +7,10 @@ import { KeyRenderer, ValueRenderer, RenderResponse } from '../../response-rende
 const Methodology = props => (
   <View style={ChatStyles.StdBubble}>
     <View style={ChatStyles.StdBubbleRow}>
-      <Text style={ChatStyles.StdBubbleText}>Our methodology includes:</Text>
+      <Text style={ChatStyles.StdBubbleText}>
+        Allllllriight! Motili developers are very productive.
+        Check out the methods they use to do it!
+      </Text>
     </View>
     {
       RenderResponse(props.details, KeyRenderer, ValueRenderer)

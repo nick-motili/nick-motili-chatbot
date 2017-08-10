@@ -91,12 +91,12 @@ const scheduleResponse = (text) => {
   return rval;
 };
 
-const otherResponse = (text) => {
+const benefitsResponse = (text) => {
   let rval = null;
 
-  if (text.match(/other things/i)) {
+  if (text.match(/benefits/i)) {
     rval = {
-      responseType: MessageTypes.Other,
+      responseType: MessageTypes.Benefits,
       responseDetails: JobData.misc,
     };
   }
@@ -128,7 +128,7 @@ const responses = [
   equipmentResponse,
   methodologyResponse,
   scheduleResponse,
-  otherResponse,
+  benefitsResponse,
   helpResponse,
   defaultResponse,
 ];

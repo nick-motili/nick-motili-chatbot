@@ -7,7 +7,7 @@ import { KeyRenderer, ValueRenderer, RenderResponse } from '../../response-rende
 const Schedule = props => (
   <View style={ChatStyles.StdBubble}>
     <View style={ChatStyles.StdBubbleRow}>
-      <Text style={ChatStyles.StdBubbleText}>Alright! Here is our work schedule:</Text>
+      <Text style={ChatStyles.StdBubbleText}>OOOOKKKAAAYYY! Check out this schedule!</Text>
     </View>
     {
       RenderResponse(props.details, KeyRenderer, ValueRenderer)
