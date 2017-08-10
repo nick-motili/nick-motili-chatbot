@@ -41,7 +41,10 @@ const technologiesResponse = (text) => {
     if (developerType in JobData.technologies) {
       rval = {
         responseType: MessageTypes.Technologies,
-        responseDetails: JobData.technologies[developerType],
+        responseDetails: {
+          qualifications: JobData.technologies[developerType],
+          bonus: JobData.bonuspoints,
+        },
       };
     }
   }

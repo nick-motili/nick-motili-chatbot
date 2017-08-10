@@ -19,6 +19,10 @@ const styles = StyleSheet.create({
     paddingTop: 5,
     backgroundColor: '#74cee8',
     borderRadius: 8,
+    marginBottom: 8,
+  },
+  BonusBubble: {
+    marginTop: 10,
   },
 });
 
@@ -46,15 +50,29 @@ const createDetailsRow = (key, value) => {
 };
 
 const Technologies = props => (
-  <View style={ChatStyles.StdBubble}>
-    <View style={[styles.TechnologyRow, styles.TechnologyRowHeader]}>
-      <Text style={ChatStyles.StdBubbleText}>
-          Alright, here are the technologies we use:
-      </Text>
+  <View>
+    <View style={ChatStyles.StdBubble}>
+      <View style={[styles.TechnologyRow, styles.TechnologyRowHeader]}>
+        <Text style={ChatStyles.StdBubbleText}>
+            Alright, here are the technologies we use:
+        </Text>
+      </View>
+      {
+        Object.keys(props.details.qualifications).map(
+          x => createDetailsRow(x, props.details.qualifications[x]),
+        )
+      }
     </View>
-    {
-      Object.keys(props.details).map(x => createDetailsRow(x, props.details[x]))
-    }
+    <View style={[ChatStyles.StdBubble, styles.BonusBubble]}>
+      <View style={[styles.TechnologyRow, styles.TechnologyRowHeader]}>
+        <Text style={ChatStyles.StdBubbleText}>
+            Oh! And Bonus points for:
+        </Text>
+      </View>
+      {
+        Object.keys(props.details.bonus).map(x => createDetailsRow(x, props.details.bonus[x]))
+      }
+    </View>
   </View>
 );
 
