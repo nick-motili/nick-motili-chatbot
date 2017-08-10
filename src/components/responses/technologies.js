@@ -14,7 +14,7 @@ const Technologies = props => (
     <View style={ChatStyles.StdBubble}>
       <View style={[ChatStyles.StdBubbleRow, ChatStyles.StdBubbleHeader]}>
         <Text style={ChatStyles.StdBubbleText}>
-            Alright, here are the technologies we use:
+          Here&apos;s a list of qualifications:
         </Text>
       </View>
       {

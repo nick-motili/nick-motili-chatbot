@@ -54,10 +54,24 @@ const technologiesResponse = (text) => {
 
 const equipmentResponse = (text) => {
   let rval = null;
+
   if (text.match(/equipment/i)) {
     rval = {
       responseType: MessageTypes.Equipment,
       responseDetails: JobData.equipment,
+    };
+  }
+
+  return rval;
+};
+
+const methodologyResponse = (text) => {
+  let rval = null;
+
+  if (text.match(/methodo/i)) {
+    rval = {
+      responseType: MessageTypes.Methodology,
+      responseDetails: JobData.methodology,
     };
   }
 
@@ -78,7 +92,7 @@ const helpResponse = (text) => {
 
 const defaultResponse = (/* text */) => ({
   responseType: MessageTypes.Text,
-  responseDetails: "Hmmm.. I don't get it. You can always ask for help (hint: type 'help').",
+  responseDetails: "Hmmm.. I don't get it. You can always ask for help (hint: type HELP).",
 });
 
 const responses = [
@@ -86,6 +100,7 @@ const responses = [
   qualificationsSelectorResponse,
   technologiesResponse,
   equipmentResponse,
+  methodologyResponse,
   helpResponse,
   defaultResponse,
 ];

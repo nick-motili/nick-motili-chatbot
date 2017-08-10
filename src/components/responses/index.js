@@ -3,6 +3,7 @@ import JobDetails from './job-details';
 import QualificationsSelector from './qualifications-selector';
 import Technologies from './technologies';
 import Equipment from './equipment';
+import Methodology from './methodology';
 import Help from './help';
 
 export {
@@ -11,5 +12,6 @@ export {
   QualificationsSelector,
   Technologies,
   Equipment,
+  Methodology,
   Help,
 };

@@ -18,6 +18,9 @@ const HelpScreen = (/* rops */) => (
     <View style={ChatStyles.StdBubbleRow}>
       <Text style={ChatStyles.StdBubbleText}>Ask me about the <B>equipment</B>.</Text>
     </View>
+    <View style={ChatStyles.StdBubbleRow}>
+      <Text style={ChatStyles.StdBubbleText}>Ask me about our <B>methodology</B>.</Text>
+    </View>
   </View>
 );
 

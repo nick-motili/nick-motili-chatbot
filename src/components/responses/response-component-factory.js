@@ -7,6 +7,7 @@ import {
   Technologies,
   Equipment,
   Help,
+  Methodology,
 } from '.';
 
 
@@ -22,6 +23,8 @@ const factory = (messageType, messageDetails) => {
       return <Technologies details={messageDetails} />;
     case MessageTypes.Equipment:
       return <Equipment details={messageDetails} />;
+    case MessageTypes.Methodology:
+      return <Methodology details={messageDetails} />;
     case MessageTypes.Help:
       return <Help details={messageDetails} />;
     default:

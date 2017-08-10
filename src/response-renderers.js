@@ -29,6 +29,7 @@ const IconKeyRenderer = iconMap => (key) => {
     return (<Icon
       name={iconMap[key]}
       color={StyleConstants.StdIconColor}
+      size={StyleConstants.StdIconSize}
       style={ChatStyles.StdIcon}
     />);
   }
@@ -93,10 +94,31 @@ const oneOfRenderer = (value) => {
   return null;
 };
 
+const boolRenderer = (value) => {
+  if (value === true) {
+    return (<Icon
+      name="check"
+      color={StyleConstants.StdIconColor}
+      size={StyleConstants.StdIconSize}
+      style={ChatStyles.StdIcon}
+    />);
+  } else if (value === false) {
+    return (<Icon
+      name="highlight-off"
+      color={StyleConstants.StdIconColor}
+      size={StyleConstants.StdIconSize}
+      style={ChatStyles.StdIcon}
+    />);
+  }
+
+  return null;
+};
+
 const renderingChain = [
   rangeRenderer,
   dateRenderer,
   oneOfRenderer,
+  boolRenderer,
   basicStringRenderer,
 ];
 
