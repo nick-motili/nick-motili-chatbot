@@ -74,8 +74,8 @@ const oneOfRenderer = (value) => {
       const oneOfList = value.oneof;
 
       return (
-        <View style={ChatStyles.OneOfSection}>
-          <View style={ChatStyles.OneOfSectionHeader}>
+        <View style={ChatStyles.CalloutSection}>
+          <View style={ChatStyles.CalloutSectionHeader}>
             <Text style={ChatStyles.StdBubbleText}>One of</Text>
           </View>
           {
@@ -114,11 +114,30 @@ const boolRenderer = (value) => {
   return null;
 };
 
+const arrayRenderer = (value) => {
+  if (Array.isArray(value)) {
+    return (
+      <View style={ChatStyles.CalloutSection}>
+        {
+          value.map(item => (
+            <View style={ChatStyles.StdBubbleRow} key={item}>
+              <Text style={ChatStyles.StdBubbleText}>- </Text>{ ValueRenderer(item) }
+            </View>
+          ))
+        }
+      </View>
+    );
+  }
+
+  return null;
+};
+
 const renderingChain = [
   rangeRenderer,
   dateRenderer,
   oneOfRenderer,
   boolRenderer,
+  arrayRenderer,
   basicStringRenderer,
 ];
 

@@ -80,13 +80,13 @@ const styles = StyleSheet.create({
   StdIcon: {
     marginRight: 10,
   },
-  OneOfSection: {
+  CalloutSection: {
     flex: 2,
     backgroundColor: '#74cee8',
     padding: 15,
     borderRadius: 8,
   },
-  OneOfSectionHeader: {
+  CalloutSectionHeader: {
     borderColor: '#ffffff',
     borderBottomWidth: 1,
     marginBottom: 10,
