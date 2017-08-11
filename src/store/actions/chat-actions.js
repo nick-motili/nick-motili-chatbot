@@ -10,6 +10,7 @@ const MessageTypes = {
   Methodology: 'METHODOLOGY',
   Schedule: 'SCHEDULE',
   Benefits: 'BENEFITS',
+  Welcome: 'WELCOME',
 };
 
 function AddMessage(messageId, isBot, messageType, messageDetails) {

@@ -22,8 +22,8 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   Avatar: {
-    marginRight: 30,
-    marginLeft: 25,
+    marginRight: 35,
+    marginLeft: 35,
   },
   ChatFooter: {
     height: 40,

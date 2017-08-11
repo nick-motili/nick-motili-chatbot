@@ -7,6 +7,7 @@ import Methodology from './methodology';
 import Schedule from './schedule';
 import Benefits from './benefits';
 import Help from './help';
+import Welcome from './welcome';
 
 export {
   BasicText,
@@ -18,4 +19,5 @@ export {
   Schedule,
   Benefits,
   Help,
+  Welcome,
 };

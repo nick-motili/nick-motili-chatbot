@@ -10,6 +10,7 @@ import {
   Schedule,
   Benefits,
   Help,
+  Welcome,
 } from '.';
 
 
@@ -33,6 +34,8 @@ const factory = (messageType, messageDetails) => {
       return <Benefits details={messageDetails} />;
     case MessageTypes.Help:
       return <Help details={messageDetails} />;
+    case MessageTypes.Welcome:
+      return <Welcome details={messageDetails} />;
     default:
       throw new Error(`Can not locate component for ${messageType}`);
   }
